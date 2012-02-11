@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>GoTop</title>
+	
+	<style>
+		body {
+			background-color: #838383;
+		}
+		#content {
+			background-color: #444;
+			color: white;
+			height: 1000px;
+			margin: 0 auto;
+			padding-top: 30px;
+			text-align: center;
+			width: 960px;
+		}
+		#top {
+			background-color: black;
+			color: white;
+			display: none;
+			font-size: 20px;
+			margin: 20px 0px;
+			text-align: center;
+			width: 100px;
+		}
+	</style>
+	
+	<script type="text/javascript">
+		$(function(){
+		
+			$("#tile").tile({
+				perspective: 400,
+				degree: 10,
+				inverse: true
+			});
+		
+		});
+	</script>
+	
+</head>
+<body>
+	<div id="content">Content</div>
+	
+	<div id="top">Top</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js" type="text/javascript"></script>
+	<script src="js/jquery.gotop.min.js" type="text/javascript"></script>
+	
+	<script type="text/javascript">
+		$(function(){
+		
+			$('#top').gotop({
+				content:	960, /*The size of the main content so the button is never display over the content*/
+			  	bottom: 	30, /*The space in pixel between the button and the bottom of the window*/
+			  	margin:		"none", /*The margin between the button and the left or right of the window. If this parameter is set to 'none', the plugin center the button automatically*/
+			  	position:	"right", /*If the button is display on the left or the right of the window*/
+			  	scrollTop:	100, /*The button is displayed when the user scroll down; in pixel*/
+			  	duration:	700 /*Duration in milliseconds for the fade in and fade out*/
+			});
+		
+		});
+	</script>
+</body>
+</html>
